@@ -19,6 +19,7 @@
 		588D8E0D2A6E26540014D195 /* DynamicProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E0C2A6E26540014D195 /* DynamicProgram.swift */; };
 		588D8E0F2A6E72FA0014D195 /* TDArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E0E2A6E72FA0014D195 /* TDArray.swift */; };
 		588D8E2E2A6FD5DB0014D195 /* Partition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E2D2A6FD5DB0014D195 /* Partition.swift */; };
+		588D8E302A70191E0014D195 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 588D8E2F2A70191E0014D195 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +31,13 @@
 		58688A9F2A4837DF0077D8DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58688AA22A4837DF0077D8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58688AA42A4837DF0077D8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58688AAA2A483A5B0077D8DA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		588D8E042A5FF4A40014D195 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		588D8E062A6AC2970014D195 /* Backtrace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtrace.swift; sourceTree = "<group>"; };
 		588D8E082A6AC3440014D195 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		588D8E0C2A6E26540014D195 /* DynamicProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgram.swift; sourceTree = "<group>"; };
 		588D8E0E2A6E72FA0014D195 /* TDArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDArray.swift; sourceTree = "<group>"; };
 		588D8E2D2A6FD5DB0014D195 /* Partition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partition.swift; sourceTree = "<group>"; };
+		588D8E2F2A70191E0014D195 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +83,7 @@
 				58688A9F2A4837DF0077D8DA /* Assets.xcassets */,
 				58688AA12A4837DF0077D8DA /* LaunchScreen.storyboard */,
 				58688AA42A4837DF0077D8DA /* Info.plist */,
-				58688AAA2A483A5B0077D8DA /* README.md */,
+				588D8E2F2A70191E0014D195 /* README.md */,
 			);
 			path = iOS.Swift;
 			sourceTree = "<group>";
@@ -147,6 +148,7 @@
 			files = (
 				58688AA32A4837DF0077D8DA /* LaunchScreen.storyboard in Resources */,
 				58688AA02A4837DF0077D8DA /* Assets.xcassets in Resources */,
+				588D8E302A70191E0014D195 /* README.md in Resources */,
 				58688A9E2A4837DE0077D8DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
