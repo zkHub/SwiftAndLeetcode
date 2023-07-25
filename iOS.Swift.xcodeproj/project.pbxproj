@@ -18,6 +18,7 @@
 		588D8E092A6AC3440014D195 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E082A6AC3440014D195 /* Greedy.swift */; };
 		588D8E0D2A6E26540014D195 /* DynamicProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E0C2A6E26540014D195 /* DynamicProgram.swift */; };
 		588D8E0F2A6E72FA0014D195 /* TDArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E0E2A6E72FA0014D195 /* TDArray.swift */; };
+		588D8E2E2A6FD5DB0014D195 /* Partition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E2D2A6FD5DB0014D195 /* Partition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		588D8E082A6AC3440014D195 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		588D8E0C2A6E26540014D195 /* DynamicProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgram.swift; sourceTree = "<group>"; };
 		588D8E0E2A6E72FA0014D195 /* TDArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDArray.swift; sourceTree = "<group>"; };
+		588D8E2D2A6FD5DB0014D195 /* Partition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				588D8E082A6AC3440014D195 /* Greedy.swift */,
 				588D8E0C2A6E26540014D195 /* DynamicProgram.swift */,
 				588D8E0E2A6E72FA0014D195 /* TDArray.swift */,
+				588D8E2D2A6FD5DB0014D195 /* Partition.swift */,
 				58688A9C2A4837DE0077D8DA /* Main.storyboard */,
 				58688A9F2A4837DF0077D8DA /* Assets.xcassets */,
 				58688AA12A4837DF0077D8DA /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				588D8E092A6AC3440014D195 /* Greedy.swift in Sources */,
 				588D8E052A5FF4A40014D195 /* Sort.swift in Sources */,
 				588D8E072A6AC2970014D195 /* Backtrace.swift in Sources */,
+				588D8E2E2A6FD5DB0014D195 /* Partition.swift in Sources */,
 				588D8E0F2A6E72FA0014D195 /* TDArray.swift in Sources */,
 				58688A972A4837DE0077D8DA /* AppDelegate.swift in Sources */,
 				58688A992A4837DE0077D8DA /* SceneDelegate.swift in Sources */,

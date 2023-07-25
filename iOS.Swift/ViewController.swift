@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         print(TDArray.findDiagonalOrder([[1,2,3],[4,5,6],[7,8,9]]))
         print(TDArray.spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
         print(TDArray.generate(5))
+        print(DynamicProgram.isMatch("mississippi",
+                                     "mis*is*p*."))
+        
+        print(Partation.findMedianSortedArrays([1,2], [3,4]))
     }
     
     enum Answer {
