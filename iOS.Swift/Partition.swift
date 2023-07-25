@@ -11,7 +11,7 @@ class Partation {
     
     // 4. 寻找两个正序数组的中位数 https://leetcode.cn/problems/median-of-two-sorted-arrays/
     class func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
-        var m = nums1.count, n = nums2.count
+        let m = nums1.count, n = nums2.count
         if (m+n) % 2 == 0 {
             return Double((getKthElement(nums1, nums2, (m+n)/2) + getKthElement(nums1, nums2, (m+n)/2+1))) / 2.0
         } else {
