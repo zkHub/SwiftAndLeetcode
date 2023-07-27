@@ -14,7 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         test1()
         
-
+//        func mult(_ num: Int) -> (Int) -> Int {
+//            return { val in
+//                return num * val
+//            }
+//        }
+//        var a = mult(2)(2)
+//        var b: Set<Int> = Set()
+//        b.insert(1)
+        
         Sort.init().sort()
         print(Backtrace.letterCombinations("23"))
         print(Greedy.candy([1,0,2]))
@@ -28,6 +36,11 @@ class ViewController: UIViewController {
                                      "mis*is*p*."))
         
         print(Partation.findMedianSortedArrays([1,2], [3,4]))
+        print(SlideWindow.lengthOfLongestSubstring("abcabcbb"))
+        print(SlideWindow.maxScore([1,2,3,4,5,6,1], 3))
+        print(SlideWindow.longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3))
+        print(SlideWindow.longestSubarray([4,2,2,2,4,4,4,4,2,2], 0))
+        print(SlideWindow.minWindow("bba", "ab"))
     }
     
     enum Answer {
