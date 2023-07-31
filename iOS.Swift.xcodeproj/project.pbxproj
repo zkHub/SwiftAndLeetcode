@@ -21,6 +21,12 @@
 		588D8E2E2A6FD5DB0014D195 /* Partition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E2D2A6FD5DB0014D195 /* Partition.swift */; };
 		588D8E302A70191E0014D195 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 588D8E2F2A70191E0014D195 /* README.md */; };
 		588D8E572A70FDBE0014D195 /* SlideWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D8E562A70FDBE0014D195 /* SlideWindow.swift */; };
+		58A7A5932A739C2D00939F74 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A5922A739C2D00939F74 /* BinaryTree.swift */; };
+		58A7A5952A74F60A00939F74 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A5942A74F60A00939F74 /* Hash.swift */; };
+		58A7A5972A75107600939F74 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A5962A75107600939F74 /* Stack.swift */; };
+		58A7A5992A762F6700939F74 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A5982A762F6700939F74 /* Enum.swift */; };
+		58A7A59B2A765DB100939F74 /* Subset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A59A2A765DB100939F74 /* Subset.swift */; };
+		58A7A5A02A77944400939F74 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7A59F2A77944400939F74 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		588D8E2D2A6FD5DB0014D195 /* Partition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partition.swift; sourceTree = "<group>"; };
 		588D8E2F2A70191E0014D195 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		588D8E562A70FDBE0014D195 /* SlideWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideWindow.swift; sourceTree = "<group>"; };
+		58A7A5922A739C2D00939F74 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		58A7A5942A74F60A00939F74 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		58A7A5962A75107600939F74 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		58A7A5982A762F6700939F74 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		58A7A59A2A765DB100939F74 /* Subset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subset.swift; sourceTree = "<group>"; };
+		58A7A59F2A77944400939F74 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,12 @@
 				588D8E0E2A6E72FA0014D195 /* TDArray.swift */,
 				588D8E2D2A6FD5DB0014D195 /* Partition.swift */,
 				588D8E562A70FDBE0014D195 /* SlideWindow.swift */,
+				58A7A5922A739C2D00939F74 /* BinaryTree.swift */,
+				58A7A59F2A77944400939F74 /* LinkedList.swift */,
+				58A7A5942A74F60A00939F74 /* Hash.swift */,
+				58A7A5962A75107600939F74 /* Stack.swift */,
+				58A7A5982A762F6700939F74 /* Enum.swift */,
+				58A7A59A2A765DB100939F74 /* Subset.swift */,
 				58688A9C2A4837DE0077D8DA /* Main.storyboard */,
 				58688A9F2A4837DF0077D8DA /* Assets.xcassets */,
 				58688AA12A4837DF0077D8DA /* LaunchScreen.storyboard */,
@@ -164,15 +182,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				58688A9B2A4837DE0077D8DA /* ViewController.swift in Sources */,
+				58A7A5972A75107600939F74 /* Stack.swift in Sources */,
+				58A7A5952A74F60A00939F74 /* Hash.swift in Sources */,
 				588D8E0D2A6E26540014D195 /* DynamicProgram.swift in Sources */,
+				58A7A5992A762F6700939F74 /* Enum.swift in Sources */,
 				588D8E092A6AC3440014D195 /* Greedy.swift in Sources */,
 				588D8E052A5FF4A40014D195 /* Sort.swift in Sources */,
+				58A7A59B2A765DB100939F74 /* Subset.swift in Sources */,
 				588D8E072A6AC2970014D195 /* Backtrace.swift in Sources */,
 				588D8E572A70FDBE0014D195 /* SlideWindow.swift in Sources */,
+				58A7A5932A739C2D00939F74 /* BinaryTree.swift in Sources */,
 				588D8E2E2A6FD5DB0014D195 /* Partition.swift in Sources */,
 				588D8E0F2A6E72FA0014D195 /* TDArray.swift in Sources */,
 				58688A972A4837DE0077D8DA /* AppDelegate.swift in Sources */,
 				58688A992A4837DE0077D8DA /* SceneDelegate.swift in Sources */,
+				58A7A5A02A77944400939F74 /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,23 +24,16 @@ class ViewController: UIViewController {
 //        b.insert(1)
         
         Sort.init().sort()
-        print(Backtrace.letterCombinations("23"))
-        print(Greedy.candy([1,0,2]))
-        print(Greedy.maxArea([1,8,6,2,5,4,8,3,7]))
-        print(DynamicProgram.longestCommonSubsequence("abcde", "ace"))
-        print(DynamicProgram.maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
-        print(TDArray.findDiagonalOrder([[1,2,3],[4,5,6],[7,8,9]]))
-        print(TDArray.spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
-        print(TDArray.generate(5))
-        print(DynamicProgram.isMatch("mississippi",
-                                     "mis*is*p*."))
-        
-        print(Partation.findMedianSortedArrays([1,2], [3,4]))
-        print(SlideWindow.lengthOfLongestSubstring("abcabcbb"))
-        print(SlideWindow.maxScore([1,2,3,4,5,6,1], 3))
-        print(SlideWindow.longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3))
-        print(SlideWindow.longestSubarray([4,2,2,2,4,4,4,4,2,2], 0))
-        print(SlideWindow.minWindow("bba", "ab"))
+        Backtrace.execute()
+        DynamicProgram.execute()
+        TDArray.execute()
+        Partation.execute()
+        SlideWindow.execute()
+        BinaryTree.execute()
+        Hash.execute()
+        Stack.execute()
+        Enum.execute()
+        Subset.execute()
     }
     
     enum Answer {

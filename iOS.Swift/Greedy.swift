@@ -9,8 +9,14 @@ import Foundation
 
 class Greedy {
     
+    class func execute() {
+        print(Greedy().candy([1,0,2]))
+        print(Greedy().maxArea([1,8,6,2,5,4,8,3,7]))
+    }
+    
+    
     // 135.分发糖果 https://leetcode.cn/problems/candy/
-    class func candy(_ ratings: [Int]) -> Int {
+    func candy(_ ratings: [Int]) -> Int {
         // 从左到右，按规则计算
         var left = [Int](repeating: 1, count: ratings.count)
         for i in 1..<ratings.count {
@@ -32,7 +38,7 @@ class Greedy {
     }
     
     // 11.盛最多水的容器 https://leetcode.cn/problems/container-with-most-water/
-    class func maxArea(_ height: [Int]) -> Int {
+    func maxArea(_ height: [Int]) -> Int {
         var left = 0
         var right = height.count-1
         var area = 0

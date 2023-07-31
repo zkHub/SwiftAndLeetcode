@@ -8,8 +8,18 @@
 import Foundation
 
 class SlideWindow {
+    
+    class func execute() {
+        print(SlideWindow().lengthOfLongestSubstring("abcabcbb"))
+        print(SlideWindow().maxScore([1,2,3,4,5,6,1], 3))
+        print(SlideWindow().longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3))
+        print(SlideWindow().longestSubarray([4,2,2,2,4,4,4,4,2,2], 0))
+        print(SlideWindow().minWindow("bba", "ab"))
+    }
+    
+    
     // 3. 无重复字符的最长子串 https://leetcode.cn/problems/longest-substring-without-repeating-characters/
-    class func lengthOfLongestSubstring(_ s: String) -> Int {
+    func lengthOfLongestSubstring(_ s: String) -> Int {
         // 滑动窗口
 //        var queue = [Character]()
 //        var maxLength = 0
@@ -38,7 +48,7 @@ class SlideWindow {
     }
     
     // 1423. 可获得的最大点数 https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/
-    class func maxScore(_ cardPoints: [Int], _ k: Int) -> Int {
+    func maxScore(_ cardPoints: [Int], _ k: Int) -> Int {
         // 首尾摸k张牌最大和，转换成剩下牌的最小和 这里隐式的left、right是固定长度
         let windowLen = cardPoints.count - k
         let sum = cardPoints.reduce(0, +)
@@ -55,7 +65,7 @@ class SlideWindow {
     }
     
     // 1004. 最大连续1的个数 III https://leetcode.cn/problems/max-consecutive-ones-iii/
-    class func longestOnes(_ nums: [Int], _ k: Int) -> Int {
+    func longestOnes(_ nums: [Int], _ k: Int) -> Int {
         // 转换成最多包含k个0的最长子串长度
         var left = 0, right = 0 // 双指针，表示遍历区间 left...right
         var maxLen = 0 // 最长子串长度
@@ -78,7 +88,7 @@ class SlideWindow {
     
     
     // 1438. 绝对差不超过限制的最长连续子数组 https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/
-    class func longestSubarray(_ nums: [Int], _ limit: Int) -> Int {
+    func longestSubarray(_ nums: [Int], _ limit: Int) -> Int {
         guard nums.count > 0 else{
             return 0
         }
@@ -108,7 +118,7 @@ class SlideWindow {
         return  rescount
     }
     
-//    class func minWindow(_ s: String, _ t: String) -> String {
+//    func minWindow(_ s: String, _ t: String) -> String {
 //        if s.count < t.count {
 //            return ""
 //        }
@@ -168,7 +178,7 @@ class SlideWindow {
 //    }
     
     
-//    class func minWindow(_ s: String, _ t: String) -> String {
+//    func minWindow(_ s: String, _ t: String) -> String {
 //        // string转换成character数组，通过utf8转成int
 //        let schars = Array(s.utf8).map{Int($0)}
 //        let tchars = Array(t.utf8).map{Int($0)}
@@ -218,7 +228,7 @@ class SlideWindow {
 //        return String(s[index1..<index2])
 //      }
     
-    class func minWindow(_ s: String, _ t: String) -> String {
+    func minWindow(_ s: String, _ t: String) -> String {
         if t.count > s.count {
             return ""
         }

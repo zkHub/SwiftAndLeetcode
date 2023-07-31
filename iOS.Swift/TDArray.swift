@@ -9,8 +9,15 @@ import Foundation
 
 class TDArray {
     
+    class func execute() {
+        print(TDArray().findDiagonalOrder([[1,2,3],[4,5,6],[7,8,9]]))
+        print(TDArray().spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
+        print(TDArray().generate(5))
+    }
+    
+    
     // 498.对角线遍历 https://leetcode.cn/problems/diagonal-traverse/
-    class func findDiagonalOrder(_ mat: [[Int]]) -> [Int] {
+    func findDiagonalOrder(_ mat: [[Int]]) -> [Int] {
         let m = mat.count
         let n = mat[0].count
         var nums = [Int]()
@@ -44,7 +51,7 @@ class TDArray {
     }
     
     // 54.螺旋矩阵 https://leetcode.cn/problems/spiral-matrix/
-    class func spiralOrder(_ matrix: [[Int]]) -> [Int] {
+    func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         var nums = [Int]()
         var up = 0, down = matrix.count-1, left = 0, right = matrix[0].count-1
         while true {
@@ -78,7 +85,7 @@ class TDArray {
     }
     
     // 118.杨辉三角 https://leetcode.cn/problems/pascals-triangle/
-    class func generate(_ numRows: Int) -> [[Int]] {
+    func generate(_ numRows: Int) -> [[Int]] {
         var nums = [[Int]]()
         for i in 0...numRows-1 {
             nums.append([Int](repeating: 1, count: i+1))

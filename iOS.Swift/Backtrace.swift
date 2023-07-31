@@ -10,8 +10,12 @@ import Foundation
 
 class Backtrace {
     
+    class func execute() {
+        print(Backtrace().letterCombinations("23"))
+    }
+    
     // 17.电话号码的字母组合 https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
-    class func letterCombinations(_ digits: String) -> [String] {
+    func letterCombinations(_ digits: String) -> [String] {
         let map = [
             "2":"abc",
             "3":"def",

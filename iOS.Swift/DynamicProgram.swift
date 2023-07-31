@@ -9,8 +9,14 @@ import Foundation
 
 class DynamicProgram {
     
+    class func execute() {
+        print(DynamicProgram().longestCommonSubsequence("abcde", "ace"))
+        print(DynamicProgram().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+        print(DynamicProgram().isMatch("mississippi", "mis*is*p*."))
+    }
+    
     // 1143.最长公共子序列 https://leetcode.cn/problems/longest-common-subsequence/
-    class func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
+    func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
         
         var dp = [[Int]](repeating: [Int](repeating: 0, count: text2.count+1), count: text1.count+1)
         let array1 = Array(text1)
@@ -28,7 +34,7 @@ class DynamicProgram {
     }
 
     // 53.最大子数组和 https://leetcode.cn/problems/maximum-subarray/
-    class func maxSubArray(_ nums: [Int]) -> Int {
+    func maxSubArray(_ nums: [Int]) -> Int {
 //        var dp = [Int](repeating: nums[0] , count: nums.count)
 //        for i in 1..<nums.count {
 //            dp[i] = dp[i-1]<0 ? nums[i] : dp[i-1] + nums[i]
@@ -48,7 +54,7 @@ class DynamicProgram {
     }
     
     // 10.正则表达式匹配 https://leetcode.cn/problems/regular-expression-matching/
-    class func isMatch(_ s: String, _ p: String) -> Bool {
+    func isMatch(_ s: String, _ p: String) -> Bool {
         let sArr = Array(s)
         let pArr = Array(p)
         // 定义状态
