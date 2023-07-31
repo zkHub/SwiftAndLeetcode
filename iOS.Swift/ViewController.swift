@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         Stack.execute()
         Enum.execute()
         Subset.execute()
+        LinkedList.execute()
     }
     
     enum Answer {
