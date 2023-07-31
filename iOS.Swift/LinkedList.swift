@@ -49,6 +49,8 @@ class LinkedList {
     class func execute() {
         print(ListNode.listNodeToArray(LinkedList().reverseList(ListNode.arrayToListNode([1,2,3,4,5]))))
         print(ListNode.listNodeToArray(LinkedList().reverseList1(ListNode.arrayToListNode([1,2,3,4,5]))))
+        print(ListNode.listNodeToArray(LinkedList().reverseBetween((ListNode.arrayToListNode([1,2,3,4,5])), 2, 4)))
+
     }
     // 206. 反转链表 https://leetcode.cn/problems/reverse-linked-list/
     func reverseList(_ head: ListNode?) -> ListNode? {
@@ -71,6 +73,27 @@ class LinkedList {
             cur = temp
         }
         return pre
+    }
+    
+    
+    // 92. 反转链表 II https://leetcode.cn/problems/reverse-linked-list-ii/
+    func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+        let dummyNode: ListNode? = ListNode()
+        dummyNode?.next = head
+        var pre = dummyNode
+        
+        for _ in 1..<left {
+            pre = pre?.next
+        }
+        let cur = pre?.next
+        for _ in left..<right {
+            let temp = cur?.next?.next
+            cur?.next?.next = pre?.next
+            pre?.next = cur?.next
+            cur?.next = temp
+        }
+        return dummyNode?.next
+        
     }
     
 }

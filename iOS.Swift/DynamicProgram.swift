@@ -13,6 +13,8 @@ class DynamicProgram {
         print(DynamicProgram().longestCommonSubsequence("abcde", "ace"))
         print(DynamicProgram().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
         print(DynamicProgram().isMatch("mississippi", "mis*is*p*."))
+        print(DynamicProgram().isMatch44("","******"))
+
     }
     
     // 1143.最长公共子序列 https://leetcode.cn/problems/longest-common-subsequence/
@@ -81,6 +83,40 @@ class DynamicProgram {
                 }
             }
         }
+        return dp[s.count][p.count]
+    }
+    
+    // 44. 通配符匹配 https://leetcode.cn/problems/wildcard-matching/
+    func isMatch44(_ s: String, _ p: String) -> Bool {
+        let s = Array(s)
+        let p = Array(p)
+        // 定义状态
+        var dp = [[Bool]](repeating: [Bool](repeating: false, count: p.count+1), count: s.count+1)
+        // 确认边界 s空p空true s空p非空p得全是* s非空p空false
+        dp[0][0] = true
+        for (i, char) in p.enumerated() {
+            if char == "*" {
+                dp[0][i+1] = true
+            } else {
+                break
+            }
+        }
+        if s.count == 0 || p.count == 0 {
+            return dp[s.count][p.count]
+        }
+        // 递推公式
+        for i in 1...s.count {
+            for j in 1...p.count {
+                if p[j-1] != "*" {
+                    if s[i-1] == p[j-1] || p[j-1] == "?" {
+                        dp[i][j] = dp[i-1][j-1]
+                    }
+                } else {
+                    dp[i][j] = dp[i-1][j] || dp[i][j-1]
+                }
+            }
+        }
+        
         return dp[s.count][p.count]
     }
     
