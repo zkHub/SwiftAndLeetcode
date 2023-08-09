@@ -13,7 +13,7 @@ class Hash {
         let res = Hash().groupAnagrams(["ddddddddddg","dgggggggggg"])
         print(res)
     }
-    
+    // 49. 字母异位词分组 https://leetcode.cn/problems/group-anagrams/
     func groupAnagrams(_ strs: [String]) -> [[String]] {
         var dict = [String:[String]]()
 

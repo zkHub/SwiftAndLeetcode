@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         test1()
-        
+        var a = "h a"
+        var parts = a.split(separator: " ")
 //        func mult(_ num: Int) -> (Int) -> Int {
 //            return { val in
 //                return num * val
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
 //        var b: Set<Int> = Set()
 //        b.insert(1)
         
-        Sort.init().sort()
+        Sort().sort()
         Backtrace.execute()
         DynamicProgram.execute()
         TDArray.execute()
@@ -35,6 +36,9 @@ class ViewController: UIViewController {
         Enum.execute()
         Subset.execute()
         LinkedList.execute()
+        
+        Exams().execute()
+        LCM().execute()
     }
     
     enum Answer {

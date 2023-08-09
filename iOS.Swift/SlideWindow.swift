@@ -101,7 +101,7 @@ class SlideWindow {
             tempmax = max(tempmax, nums[right])
             tempmin = min(tempmin, nums[right])
             let temp = abs(tempmax - tempmin)
-            if temp > limit { // 这里超不过最长范围之内，left跟着right一起走就行
+            if temp > limit { // 这里超不过最长范围之内，left跟着right一起走就行，否则需要重新定位left
                 if (nums[left] == tempmax || nums[left] == tempmin){
                     tempmax = nums[left + 1]
                     tempmin = nums[left + 1]
