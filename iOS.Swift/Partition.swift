@@ -22,7 +22,7 @@ class Partation {
             return Double(getKthElement(nums1, nums2, (m+n+1)/2))
         }
     }
-    // 找第k小的数
+    // 两个有序数组中找第k小的数
     func getKthElement(_ nums1: [Int], _ nums2: [Int], _ k: Int) -> Int {
         let l1 = nums1.count, l2 = nums2.count
         var i1 = 0, i2 = 0

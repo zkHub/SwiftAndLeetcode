@@ -101,7 +101,7 @@ class SlideWindow {
             tempmax = max(tempmax, nums[right])
             tempmin = min(tempmin, nums[right])
             let temp = abs(tempmax - tempmin)
-            if temp > limit { // 这里超不过最长范围之内，left跟着right一起走就行，否则需要重新定位left
+            if temp > limit { // 这里超过最长范围之内，如果left是最大最小值，则需要重新定位最大最小值
                 if (nums[left] == tempmax || nums[left] == tempmin){
                     tempmax = nums[left + 1]
                     tempmin = nums[left + 1]
@@ -118,116 +118,8 @@ class SlideWindow {
         return  rescount
     }
     
-//    func minWindow(_ s: String, _ t: String) -> String {
-//        if s.count < t.count {
-//            return ""
-//        }
-//        let sArr = Array(s), tArr = Array(t)
-//        var left = 0, right = 0
-//        var ansL = -1, ansR = -1, ansLen = Int.max
-//
-//        var sMap = [Character: Int]()
-//        var tMap = [Character: Int]()
-//        for (_, char) in tArr.enumerated() {
-//            if tMap.keys.contains(char) {
-//                tMap[char]! += 1
-//            } else {
-//                tMap[char] = 1
-//            }
-//        }
-//
-//        while right < sArr.count {
-//            var char = sArr[right]
-//            if tMap.keys.contains(char) {
-//                if sMap.keys.contains(char) {
-//                    sMap[char]! += 1
-//                } else {
-//                    sMap[char] = 1
-//                }
-//            }
-//
-//            while checkMatch(sMap, tMap) {
-//                if right-left+1 < ansLen {
-//                    ansLen = right-left+1
-//                    ansL = left
-//                    ansR = right
-//                }
-//                char = sArr[left]
-//                if tMap.keys.contains(char) {
-//                    sMap[char]! -= 1
-//                }
-//                left += 1
-//            }
-//            right += 1
-//        }
-//        return ansL == -1 ? "" : String(sArr[ansL...ansR])
-//    }
-//
-//    class func checkMatch(_ sMap: Dictionary<Character, Int>, _ tMap: Dictionary<Character, Int>) -> Bool {
-//        var isMatch = true
-//        for (_, dict) in tMap.enumerated() {
-//            if sMap.keys.contains(dict.key) {
-//                if sMap[dict.key]! < dict.value {
-//                    isMatch = false
-//                }
-//            } else {
-//                isMatch = false
-//            }
-//        }
-//        return isMatch
-//    }
     
-    
-//    func minWindow(_ s: String, _ t: String) -> String {
-//        // string转换成character数组，通过utf8转成int
-//        let schars = Array(s.utf8).map{Int($0)}
-//        let tchars = Array(t.utf8).map{Int($0)}
-//
-//        // hashmap 来存储t中各个字符的数量
-//        var hash = Array(repeating: 0, count: 128)
-//        for tchar in tchars {
-//            hash[tchar] += 1
-//        }
-//
-//        var count = tchars.count
-//        var start = 0
-//        var left = 0
-//        var right = 0
-//        var length = Int.max
-//
-//        // 移动right
-//        while right < schars.count {
-//            // 当right匹配到时，count-1，同时hash值减一
-//            if hash[schars[right]] > 0 {
-//                count -= 1
-//            }
-//            hash[schars[right]] -= 1
-//
-//            // 当完整的匹配到之后，需要挪动left，直到不符合完整匹配，先记录符合的情况，在处理left
-//            while count == 0 {
-//                if right - left + 1 < length {
-//                    // 记录最短完全匹配
-//                    length = right - left + 1
-//                    start = left
-//                }
-//                // 当碰到第一个hash是0的就相当于，left移动下一次之后，这个字符就不符合了，hash加回来之后，等right移动寻找到这个字符，才能满足完全符合
-//                if hash[schars[left]] == 0 {
-//                    count += 1
-//                }
-//                hash[schars[left]] += 1
-//                left += 1
-//            }
-//
-//            right += 1
-//        }
-//        if length > schars.count {
-//            return ""
-//        }
-//        let index1 = s.index(s.startIndex, offsetBy: start)
-//        let index2 = s.index(s.startIndex, offsetBy: start + length)
-//        return String(s[index1..<index2])
-//      }
-    
+    // 76. 最小覆盖子串 https://leetcode.cn/problems/minimum-window-substring/
     func minWindow(_ s: String, _ t: String) -> String {
         if t.count > s.count {
             return ""
@@ -278,6 +170,116 @@ class SlideWindow {
         return String(schars[start...start+length-1])
         
     }
+    
+    //    func minWindow(_ s: String, _ t: String) -> String {
+    //        if s.count < t.count {
+    //            return ""
+    //        }
+    //        let sArr = Array(s), tArr = Array(t)
+    //        var left = 0, right = 0
+    //        var ansL = -1, ansR = -1, ansLen = Int.max
+    //
+    //        var sMap = [Character: Int]()
+    //        var tMap = [Character: Int]()
+    //        for (_, char) in tArr.enumerated() {
+    //            if tMap.keys.contains(char) {
+    //                tMap[char]! += 1
+    //            } else {
+    //                tMap[char] = 1
+    //            }
+    //        }
+    //
+    //        while right < sArr.count {
+    //            var char = sArr[right]
+    //            if tMap.keys.contains(char) {
+    //                if sMap.keys.contains(char) {
+    //                    sMap[char]! += 1
+    //                } else {
+    //                    sMap[char] = 1
+    //                }
+    //            }
+    //
+    //            while checkMatch(sMap, tMap) {
+    //                if right-left+1 < ansLen {
+    //                    ansLen = right-left+1
+    //                    ansL = left
+    //                    ansR = right
+    //                }
+    //                char = sArr[left]
+    //                if tMap.keys.contains(char) {
+    //                    sMap[char]! -= 1
+    //                }
+    //                left += 1
+    //            }
+    //            right += 1
+    //        }
+    //        return ansL == -1 ? "" : String(sArr[ansL...ansR])
+    //    }
+    //
+    //    class func checkMatch(_ sMap: Dictionary<Character, Int>, _ tMap: Dictionary<Character, Int>) -> Bool {
+    //        var isMatch = true
+    //        for (_, dict) in tMap.enumerated() {
+    //            if sMap.keys.contains(dict.key) {
+    //                if sMap[dict.key]! < dict.value {
+    //                    isMatch = false
+    //                }
+    //            } else {
+    //                isMatch = false
+    //            }
+    //        }
+    //        return isMatch
+    //    }
+        
+        
+    //    func minWindow(_ s: String, _ t: String) -> String {
+    //        // string转换成character数组，通过utf8转成int
+    //        let schars = Array(s.utf8).map{Int($0)}
+    //        let tchars = Array(t.utf8).map{Int($0)}
+    //
+    //        // hashmap 来存储t中各个字符的数量
+    //        var hash = Array(repeating: 0, count: 128)
+    //        for tchar in tchars {
+    //            hash[tchar] += 1
+    //        }
+    //
+    //        var count = tchars.count
+    //        var start = 0
+    //        var left = 0
+    //        var right = 0
+    //        var length = Int.max
+    //
+    //        // 移动right
+    //        while right < schars.count {
+    //            // 当right匹配到时，count-1，同时hash值减一
+    //            if hash[schars[right]] > 0 {
+    //                count -= 1
+    //            }
+    //            hash[schars[right]] -= 1
+    //
+    //            // 当完整的匹配到之后，需要挪动left，直到不符合完整匹配，先记录符合的情况，在处理left
+    //            while count == 0 {
+    //                if right - left + 1 < length {
+    //                    // 记录最短完全匹配
+    //                    length = right - left + 1
+    //                    start = left
+    //                }
+    //                // 当碰到第一个hash是0的就相当于，left移动下一次之后，这个字符就不符合了，hash加回来之后，等right移动寻找到这个字符，才能满足完全符合
+    //                if hash[schars[left]] == 0 {
+    //                    count += 1
+    //                }
+    //                hash[schars[left]] += 1
+    //                left += 1
+    //            }
+    //
+    //            right += 1
+    //        }
+    //        if length > schars.count {
+    //            return ""
+    //        }
+    //        let index1 = s.index(s.startIndex, offsetBy: start)
+    //        let index2 = s.index(s.startIndex, offsetBy: start + length)
+    //        return String(s[index1..<index2])
+    //      }
     
     
 }
