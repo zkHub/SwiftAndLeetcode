@@ -15,7 +15,37 @@ class LCM {
         print(gcd(2, 3))
         print(lcm(2, 3))
     }
-    // 最大公因数
+    
+    // 判断一个数是否为质数
+    
+//    素数出现规律：
+//    当n≧5时，如果n为素数，那么n mod 6 = 1 或 n mod 6 = 5，即n一定出现在6x（x≥1） 两侧。
+//    证明：
+//    当x ≥1时，有如下表示方法：
+//    ┈┈  6x，6x+1，6x+2，6x+3，6x+4，6x+5，6(x+1），6(x+1)+1┈┈
+//    不在6x两侧的数为 6x+2 ， 6x+3 ， 6x+4，即2(3x+1)，3(2x+1)，2(3x+2)，它们一定不是素数，所以素数一定出现在6x的两侧。
+//
+//    原文链接：https://blog.csdn.net/code_pang/article/details/7880245
+    
+    func isPrimeNumber(_ num: Int) -> Bool {
+        if num == 2 || num == 3 {
+            return true
+        }
+        if num % 6 != 1 && num % 6 != 5 {
+            return false
+        }
+        var i = 5
+        while i*i <= num {
+            if num % i == 0 || num % (i+2) == 0 {
+                return false
+            }
+            i += 6
+        }
+        return true
+    }
+    
+    
+    // 最大公约数
     func gcd(_ a: Int, _ b: Int) -> Int {
         return b==0 ? a : gcd(b, a%b);
     }
