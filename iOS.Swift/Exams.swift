@@ -72,4 +72,15 @@ class Exams {
     }
     
     
+    func reverseString(_ str: String) -> String {
+        var array = Array(str)
+        var i = 0, j = array.count - 1
+        while i < j {
+            (array[i], array[j]) = (array[j], array[i])
+            i = i + 1
+            j = j - 1
+        }
+        return String(array)
+    }
+    
 }

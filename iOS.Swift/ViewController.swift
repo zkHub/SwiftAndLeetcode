@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        test()
+        leetcode()
+    }
+    
+    func test() {
         test1()
         var a = "h a"
         var parts = a.split(separator: " ")
@@ -23,7 +28,9 @@ class ViewController: UIViewController {
 //        var a = mult(2)(2)
 //        var b: Set<Int> = Set()
 //        b.insert(1)
-        
+    }
+    
+    func leetcode() {
         Sort().sort()
         Backtrace.execute()
         DynamicProgram.execute()
@@ -40,6 +47,7 @@ class ViewController: UIViewController {
         Exams().execute()
         LCM().execute()
     }
+    
     
     enum Answer {
         case right, wrong

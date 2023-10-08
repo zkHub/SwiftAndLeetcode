@@ -16,9 +16,27 @@ class Sort {
 //        selectionSort(array: &array)
         mergeSort(array: &array)
         print(array)
+        
+        print(largestNumber([21, 44, 51, 7, 9, 1, 3]))
     }
 
     
+    func largestNumber(_ nums: [Int]) -> String {
+        let arr = nums.sorted { a, b in
+            let aStr = String(a)
+            let bStr = String(b)
+            return aStr+bStr > bStr+aStr
+        }
+
+        if arr.first == .zero {
+            return "0"
+        }
+        return arr.reduce("") { partialResult, a in
+            return partialResult + String(a)
+        }
+    }
+    
+    // MARK: 归并排序
     func mergeSort(array:inout Array<Int>) {
         if array.count < 2 {
             return

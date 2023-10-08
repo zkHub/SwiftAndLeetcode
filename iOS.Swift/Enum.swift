@@ -60,4 +60,19 @@ class Enum {
         return pNum == num
     }
     
+    
+    func ishuiwen(_ num: Int) -> Bool {
+        let array = Array(String(num))
+        var i = 0
+        var j = array.count - 1
+        while i < j {
+            if array[i] != array[j] {
+                return false
+            }
+            i = i + 1
+            j = j - 1
+        }
+        return true
+    }
+    
 }
