@@ -16,7 +16,7 @@ class Exams {
 //        var set = Set<Int>()
 //        set.insert(1)
 //        let array = Array(set).sorted()
-        SixteenToTen("0x2c")
+        print(SixteenToTen("0x2c"))
     }
     
     
@@ -24,7 +24,7 @@ class Exams {
     func main(_ string: String) {
         let parts = string.split(separator: " ")
         for part in parts {
-            var num = Int(part)!
+            let num = Int(part)!
             if num == 0 {return}
             print(redeemBottle(num))
         }

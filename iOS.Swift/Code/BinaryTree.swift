@@ -59,7 +59,7 @@ class BinaryTree {
             maxSum = max(maxSum, left + root.val + right)
             return root.val + max(left, right)
         }
-        bfs(root)
+        let _ = bfs(root)
         return maxSum
     }
 }

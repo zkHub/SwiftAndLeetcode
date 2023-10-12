@@ -66,7 +66,7 @@ class LCM {
         var nums = nums
         // 标志位，用于表示因数是否需要更新
         var isDivided = false;
-        var n = nums.count;
+        let n = nums.count;
         // 表示当前数组中 1 的个数
         var count = 0;
         // 当前计算的最小公倍数

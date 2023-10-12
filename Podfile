@@ -7,5 +7,5 @@ target 'iOS.Swift' do
 
   # Pods for iOS.Swift
 	pod 'RxSwift'
-
+  pod 'RxCocoa'
 end

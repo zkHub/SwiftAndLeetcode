@@ -12,40 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Code().excute()
         test()
-        leetcode()
-    }
-    
-    func test() {
-        test1()
-        var a = "h a"
-        var parts = a.split(separator: " ")
-//        func mult(_ num: Int) -> (Int) -> Int {
-//            return { val in
-//                return num * val
-//            }
-//        }
-//        var a = mult(2)(2)
-//        var b: Set<Int> = Set()
-//        b.insert(1)
-    }
-    
-    func leetcode() {
-        Sort().sort()
-        Backtrace.execute()
-        DynamicProgram.execute()
-        TDArray.execute()
-        Partation.execute()
-        SlideWindow.execute()
-        BinaryTree.execute()
-        Hash.execute()
-        Stack.execute()
-        Enum.execute()
-        Subset.execute()
-        LinkedList.execute()
-        
-        Exams().execute()
-        LCM().execute()
     }
     
     
@@ -67,7 +35,20 @@ class ViewController: UIViewController {
     
 
     
-    func test1() {
+    func test() {
+        
+//        var a = "h a"
+//        var parts = a.split(separator: " ")
+//        func mult(_ num: Int) -> (Int) -> Int {
+//            return { val in
+//                return num * val
+//            }
+//        }
+//        var a = mult(2)(2)
+//        var b: Set<Int> = Set()
+//        b.insert(1)
+        
+        
         func exec(v1: Int, v2: Int, fn: (Int, Int) -> Int) {
             print(fn(v1, v2))
         }
