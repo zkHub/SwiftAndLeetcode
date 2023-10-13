@@ -6,9 +6,9 @@ target 'iOS.Swift' do
   use_frameworks!
 
   # Pods for iOS.Swift
-	pod 'Alamofire'
-  pod 'SwiftyJSON'
-#  pod 'KakaJSON'
-  pod 'Kingfisher'
-#  pod 'KingfisherWebP'
+#	pod 'Alamofire'
+#  pod 'SwiftyJSON'
+##  pod 'KakaJSON'
+#  pod 'Kingfisher'
+##  pod 'KingfisherWebP'
 end
