@@ -12,6 +12,7 @@ class Backtrace {
     
     class func execute() {
         print(Backtrace().letterCombinations("23"))
+        print(Backtrace().permute([1,2,3]))
     }
     
     // 17.电话号码的字母组合 https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
@@ -47,5 +48,33 @@ class Backtrace {
         backtrace(index: 0)
         return res
     }
+    
+    // 46. 全排列 https://leetcode.cn/problems/permutations/description/
+    func permute(_ nums: [Int]) -> [[Int]] {
+        var res = [[Int]]()
+        var used = [Bool](repeating: false, count: nums.count)
+        var temp = [Int]()
+        func dfs(_ depth: Int) {
+            if depth == nums.count {
+                res.append(Array(temp))
+                return
+            }
+            
+            for (i, num) in nums.enumerated() {
+                if !used[i] {
+                    temp.append(num)
+                    used[i] = true
+                    dfs(depth+1)
+                    temp.removeLast()
+                    used[i] = false
+                }
+            }
+
+            
+        }
+        dfs(0)
+        return res
+    }
+    
     
 }
