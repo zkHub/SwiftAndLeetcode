@@ -17,24 +17,6 @@ class ViewController: UIViewController {
     }
     
     
-    enum Answer {
-        case right, wrong
-    }
-    
-    /**
-        文档注释
-        加一
-     - Note: num是参数标签 也可以用`_`表示省略标签
-     - Returns: +1
-     - Parameter a: a
-    */
-
-    func f(num a: Int) -> Int {
-        a + 1
-    }
-    
-
-    
     func test() {
         
 //        var a = "h a"
@@ -49,19 +31,35 @@ class ViewController: UIViewController {
 //        b.insert(1)
         
         
-        func exec(v1: Int, v2: Int, fn: (Int, Int) -> Int) {
-            print(fn(v1, v2))
-        }
-        
-        exec(v1: 1, v2: 2) {
-            $0 + $1
-        }
-        
-        func exe(fn: (Int, Int) -> Int) {
-            print(fn(1, 2))
-        }
-        exe{$0 + $1}
-        
+//        func exec(v1: Int, v2: Int, fn: (Int, Int) -> Int) {
+//            print(fn(v1, v2))
+//        }
+//        
+//        exec(v1: 1, v2: 2) {
+//            $0 + $1
+//        }
+//        
+//        func exe(fn: (Int, Int) -> Int) {
+//            print(fn(1, 2))
+//        }
+//        exe{$0 + $1}
+//        
+//        enum Answer {
+//            case right, wrong
+//        }
+//        
+//        /**
+//            文档注释
+//            加一
+//         - Note: num是参数标签 也可以用`_`表示省略标签
+//         - Returns: +1
+//         - Parameter a: a
+//        */
+//
+//        func f(num a: Int) -> Int {
+//            a + 1
+//        }
+//        
         
 //        struct Point {
 //            var x: Int
