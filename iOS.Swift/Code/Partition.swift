@@ -11,7 +11,34 @@ class Partation {
     
     class func execute() {
         print(Partation().findMedianSortedArrays([1,2], [3,4]))
+        print(Partation().divide(7, -3))
     }
+    
+    // LCR 001. 两数相除 https://leetcode.cn/problems/xoh6Oh/description/
+    func divide(_ a: Int, _ b: Int) -> Int {
+        if a == Int32.min && b == -1 { // 边界特判
+            return Int(Int32.max)
+        }
+        
+        let flag = (a>0 && b<0) || (a<0 && b>0) ? true : false // 标记是否正负相反
+        // 都转为负数（负数转正可能溢出）
+        var a = a>0 ? -a : a
+        var b = b>0 ? -b : b
+        // 倍增思想
+        var res = 0
+        while a <= b {
+            var d = b, c = 1
+            while d >= Int.min >> 1 && d+d >= a {
+                d += d
+                c += c
+            }
+            a -= d
+            res += c
+        }
+        return flag ? -res : res
+    }
+    
+    
     
     // 4. 寻找两个正序数组的中位数 https://leetcode.cn/problems/median-of-two-sorted-arrays/
     func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
