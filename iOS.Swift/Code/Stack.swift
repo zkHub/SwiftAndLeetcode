@@ -16,22 +16,22 @@ class Stack {
     
     // 84. 柱状图中最大的矩形 https://leetcode.cn/problems/largest-rectangle-in-histogram/
     func largestRectangleArea(_ heights: [Int]) -> Int {
-        var area = 0
-        var left = [Int](repeating: -1, count: heights.count), right = [Int](repeating: heights.count, count: heights.count)
+        var res = 0
         var stack = [Int]()
-        for i in 0...heights.count-1 {
-            while stack.count > 0 && heights[i] < heights[stack.last!] {
-                right[stack.last!] = i
+        stack.append(0)
+        let heights = [0] + heights + [0]
+        
+        for i in 1..<heights.count {
+            while heights[i] < heights[stack.last!] {
+                let curHeight = heights[stack.last!]
                 stack.removeLast()
+                let curWidth = i - stack.last! - 1
+                res = max(res, curHeight * curWidth)
             }
-            left[i] = stack.count == 0 ? -1 : stack.last!
             stack.append(i)
         }
         
-        for i in 0...heights.count-1 {
-            area = max(area, (right[i]-left[i]-1)*heights[i])
-        }
-        return area
+        return res
     }
     
     // 85. 最大矩形 https://leetcode.cn/problems/maximal-rectangle/
