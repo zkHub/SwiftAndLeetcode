@@ -56,7 +56,7 @@ class Backtrace {
         var temp = [Int]()
         func dfs(_ depth: Int) {
             if depth == nums.count {
-                res.append(Array(temp))
+                res.append(temp)
                 return
             }
             

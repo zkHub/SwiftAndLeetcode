@@ -82,5 +82,19 @@ class Exams {
         }
         return String(array)
     }
+    // 179.最大数 https://leetcode.cn/problems/largest-number/
+    func largestNumber(_ nums: [Int]) -> String {
+        let sorted = nums.sorted { number1, number2 in
+            return "\(number1)\(number2)" > "\(number2)\(number1)"
+        }
+        if sorted[0] == 0 {
+            return "0"
+        }
+        var str = ""
+        for number in sorted {
+            str.append("\(number)")
+        }
+        return str
+    }
     
 }
